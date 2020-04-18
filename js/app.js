@@ -1,3 +1,29 @@
-const Hello = props => <h1>Hello {props.name}</h1>;
+const Highlight = props => (
+  <span className={`relative highlight highlight-${props.color}`}>
+    <span className="relative z-2">{props.children}</span>
+  </span>
+)
 
-ReactDOM.render(<Hello name="Lawrence" />, document.getElementById('root'));
+const Intro = () =>
+<div className="m-auto-ns f4 f3-m f2-1 tc w-80-l normal">
+  <div className="mb3 mb4-ns">
+    This website xxx <Highlight color='aqua'>description</Highlight>
+  </div>
+  <div>
+    <p>This website xxx <Highlight color='yellow'>description</Highlight></p>
+    <p>This website xxx <Highlight color='blue'>description</Highlight></p>
+    <p>This website xxx <Highlight color='pink'>description</Highlight></p>
+  </div>
+</div>
+
+const App = () => (
+  <div>
+    <div className="min-vh-100 ph4 flex flex-column">
+    <Intro />
+    </div>
+    <div className="flex flex-wrap container">
+    </div>
+  </div>
+)
+
+ReactDOM.render(<App />, document.getElementById('root'));
