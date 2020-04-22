@@ -1,6 +1,6 @@
-const Highlight = props => (
-  <span className={`relative highlight highlight-${props.color}`}>
-    <span className="relative z-2">{props.children}</span>
+const Highlight = ({color, children}) => (
+  <span className={`relative highlight highlight-${color}`}>
+    <span className="relative z-2">{children}</span>
   </span>
 )
 
@@ -16,9 +16,10 @@ const Intro = () =>
   </div>
 </div>
 
-const NavItem = (props) => (
-  <li className={props.className}>
-    <a className='white no-underline' href={props.href}>{props.children}
+//Destructuring
+const NavItem = ({ className, href, children}) => (
+  <li className={className}>
+    <a className='white no-underline' href={href}>{children}
     </a>
   </li>
 )
