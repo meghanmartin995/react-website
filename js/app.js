@@ -17,9 +17,10 @@ const Intro = () =>
 </div>
 
 //Destructuring
-const NavItem = ({ className, href, children}) => (
-  <li className={className}>
-    <a className='white no-underline' href={href}>{children}
+const NavItem = ({ className, href, children, logo}) => (
+  <li className={`mh2-ns f6 f4-1 tc ${className}`}>
+    <a className='white no-underline' href={href}>
+      {logo ? <img src="../images/logo.svg" className="db center logo" /> : children }
     </a>
   </li>
 )
