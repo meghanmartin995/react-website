@@ -41,6 +41,13 @@ class Attraction extends React.Component {
     this.state = {
       showInfo: false
     };
+    this.toggleInfo = this.toggleInfo.bind(this);
+  }
+
+  toggleInfo() {
+    this.setState({
+      showInfo: true
+    });
   }
 
   render() {
@@ -50,7 +57,7 @@ class Attraction extends React.Component {
     return (
         <div
         className={`ph4 ph5-ns ph0-l mb4 mb5-ns w-100 overflow-hidden pointer attraction ${className}`}
-        onClick={() => this.setState({showInfo: true})}
+        onClick={ this.toggleInfo }
         >
         <div className="relative">
           <div className="absolute w-100 h-100 flex items-center pa3 pa4-ns bg-aqua overlay"
