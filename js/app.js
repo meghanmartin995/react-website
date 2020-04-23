@@ -45,8 +45,8 @@ class Attraction extends React.Component {
   }
 
   toggleInfo() {
-    this.setState({
-      showInfo: true
+    this.setState((prevState, props) => {
+      return { showInfo: !prevState.showInfo}
     });
   }
 
