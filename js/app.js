@@ -36,14 +36,28 @@ const Nav = () => (
 );
 
 class Attraction extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showInfo: false
+    };
+  }
+
   render() {
 
   const {title, description, className, image} = this.props
+  const { showInfo}= this.state
     return (
         <div
-        className={`ph4 ph5-ns ph0-l mb4 mb5-ns w-100 overflow-hidden pointer attraction ${className}`}>
+        className={`ph4 ph5-ns ph0-l mb4 mb5-ns w-100 overflow-hidden pointer attraction ${className}`}
+        onClick={() => this.setState({showInfo: true})}
+        >
         <div className="relative">
-          <div className="absolute w-100 h-100 flex items-center pa3 pa4-ns bg-aqua overlay">
+          <div className="absolute w-100 h-100 flex items-center pa3 pa4-ns bg-aqua overlay"
+          style={{
+            transform: showInfo ? 'none' : 'translateY(-100%)'
+          }}
+          >
             <div>
               <h1 className="f4 f3-ns mt0 mb2 regular black normal lh-title">{title}</h1>
               <p className="lh-title lh-copy-ns mv0 black f6 measure-l">{description}</p>
