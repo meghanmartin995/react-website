@@ -5,14 +5,14 @@ const Highlight = ({color, children}) => (
 )
 
 const Intro = () =>
-<div className="m-auto-ns f4 f3-m f2-1 tc w-80-l normal">
+<div className="m-auto-ns f2 f3-m f2-1 tc w-80-l normal">
   <div className="mb3 mb4-ns">
-    This website xxx <Highlight color='aqua'>description</Highlight>
+    What do i <Highlight color='aqua'>want?</Highlight>
   </div>
   <div>
-    <p>This website xxx <Highlight color='yellow'>description</Highlight></p>
-    <p>This website xxx <Highlight color='blue'>description</Highlight></p>
-    <p>This website xxx <Highlight color='pink'>description</Highlight></p>
+    <p>Where should i <Highlight color='yellow'>go?</Highlight></p>
+    <p>What should i <Highlight color='blue'>do?</Highlight></p>
+    <p>Why should i <Highlight color='pink'>go?</Highlight></p>
   </div>
 </div>
 
@@ -76,7 +76,7 @@ class Attraction extends React.Component {
     return (
         <div
         className={`ph4 ph5-ns ph0-l mb4 mb5-ns w-100 overflow-hidden pointer attraction ${className}`}
-        onClick={ this.toggleInfo }
+        onMouseEnter={ this.toggleInfo }
         onMouseLeave={ this.closeInfo }
         >
         <div className="relative">
