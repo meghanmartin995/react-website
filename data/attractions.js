@@ -68,5 +68,13 @@ const attractions = [
     link: 'http://www.ghibli-museum.jp/en/',
     image: 'image_9.jpg',
     className: 'w-third-l ml-auto-l'
+  },
+  {
+    title: 'teamLAB Borderless',
+    description:
+      'Popular, immersive museum known for its colorful, futuristic digital art installations & photo ops.',
+    link: 'https://borderless.teamlab.art/',
+    image: 'image_10.jpg',
+    className: 'w-third-l ml-auto-l mr5-l'
   }
 ];
