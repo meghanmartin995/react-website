@@ -71,7 +71,7 @@ class Attraction extends React.Component {
   }
   render() {
 
-  const {title, description, className, image} = this.props
+  const {title, link, description, className, image} = this.props
   const { showInfo}= this.state
     return (
         <div
@@ -81,7 +81,7 @@ class Attraction extends React.Component {
         >
         <div className="relative">
         <Overlay {...this.props} {...this.state}/>
-          <img src={`../images/${image}`} className="db" />
+          <a href={link ? `${link}` : ""}><img src={`../images/${image}`} className="db" /></a>
         </div>
       </div>
     )
